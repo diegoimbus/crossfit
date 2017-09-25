@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { HeladosDataProvider } from '../../providers/helados-data/helados-data';
+import { Helado } from '../../providers/helados-data/helado';
+import { AddHeladoPage } from '../add-helado/add-helado';
 
-/**
- * Generated class for the HeladosPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-helados',
@@ -14,11 +11,20 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class HeladosPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  helados: Helado[]=[];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public service: HeladosDataProvider) {
+    this.helados = service.data;
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HeladosPage');
-  }
+   ionViewDidLoad() {
+     console.log('ionViewDidLoad HeladosPage');
+        
+        }
+
+    goToAdd() {
+      this.navCtrl.parent.push(AddHeladoPage);
+    }
+
 
 }
