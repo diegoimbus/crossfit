@@ -1,0 +1,42 @@
+
+<ion-content padding class="login-bg">
+  <div class="login-main">
+    <h1 class="login-title" text-right>CrossFit</h1>
+    <div class="login-form">
+      <ion-row>
+        <ion-col col-12 col-md-6 offset-md-6 col-lg-4 offset-lg-8>
+          <ion-item color="itemLight">
+            <ion-label floating color="light">Nombre</ion-label>
+            <ion-input type="text" name="name"></ion-input>
+          </ion-item>
+
+          
+        </ion-col>
+        <ion-col col-12 col-md-6 offset-md-6 col-lg-4 offset-lg-8 margin-top>
+            <ion-item color="itemLight">
+                <ion-label floating color="light">Email</ion-label>
+                <ion-input type="email" name="email"></ion-input>
+              </ion-item>
+        </ion-col>
+
+        <ion-col col-12 col-md-6 offset-md-6 col-lg-4 offset-lg-8 margin-top>
+          <ion-item color="itemLight">
+              <ion-label floating color="light">Contraseña</ion-label>
+              <ion-input type="password" name="pass"></ion-input>
+            </ion-item>
+      </ion-col>
+
+      <ion-col col-12 col-md-6 offset-md-6 col-lg-4 offset-lg-8 margin-top>
+        <ion-item color="itemLight">
+            <ion-label floating color="light">Confirmar contraseña</ion-label>
+            <ion-input type="password" name="cpass"></ion-input>
+          </ion-item>
+    </ion-col>
+      </ion-row>
+    </div>
+    <ion-row>
+      <button ion-col col-6 col-md-3 offset-md-6 col-lg-2 offset-lg-8 ion-button clear (click)="login()">Tienes una cuenta?</button>
+      <button ion-col col-6 col-md-3 col-lg-2 ion-button block (click)="signup()" >Registrarse</button>
+    </ion-row>
+  </div>
+</ion-content>ontent>

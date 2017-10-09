@@ -12,6 +12,7 @@ import { BebidasPage } from '../pages/bebidas/bebidas';
 import { AddHeladoPage } from '../pages/add-helado/add-helado';
 import { HeladosDataProvider } from '../providers/helados-data/helados-data';
 import { LoginPage } from '../pages/login/login';
+import { SignupPage } from '../pages/signup/signup';
 
 
 
@@ -23,6 +24,7 @@ import { LoginPage } from '../pages/login/login';
     BebidasPage,
     AddHeladoPage,
     LoginPage,
+    SignupPage
    
 
   ],
@@ -38,7 +40,8 @@ import { LoginPage } from '../pages/login/login';
     LoginPage, 
     HeladosPage,
     AddHeladoPage,
-    BebidasPage
+    BebidasPage,
+    SignupPage
   ],
   providers: [
     StatusBar,

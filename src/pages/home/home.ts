@@ -15,11 +15,10 @@ export class HomePage {
   menuOpc: Menu[] = [
     
         { label: 'Inicio', icon: 'home' },
-        { label: 'Bebidas', icon: 'md-beer' },
-        { label: 'Pizza', icon: 'md-pizza' },
-        { label: 'Comida', icon: 'md-restaurant' },
-        { label: 'Cafes', icon: 'md-pint' },
-        { label: 'Bar', icon: 'md-wine' }
+        { label: 'Perfil', icon: 'person' },
+        { label: 'Comparar resultados', icon: 'stats' },
+        { label: 'Crea un Box', icon: 'add-circle' },
+
     
       ]
 
