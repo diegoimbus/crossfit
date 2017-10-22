@@ -13,6 +13,7 @@ import { AddHeladoPage } from '../pages/add-helado/add-helado';
 import { HeladosDataProvider } from '../providers/helados-data/helados-data';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
+import { WodsDataProvider } from '../providers/wods-data/wods-data';
 
 
 
@@ -47,7 +48,9 @@ import { SignupPage } from '../pages/signup/signup';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    HeladosDataProvider
+    HeladosDataProvider,
+    WodsDataProvider
+    
   ]
 })
 export class AppModule {}

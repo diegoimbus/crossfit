@@ -5,7 +5,7 @@
     <button ion-button menuToggle icon-only >
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Helados</ion-title>
+    <ion-title>Records Personales</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -13,33 +13,32 @@
 
 <ion-content padding>
   <ion-row>
-      <ion-col col-12 col-md-6 col-lg-4 *ngFor="let h of helados">
-          <ion-card>
-              <img src="{{h.imagen}}" alt="">
-              <ion-card-content>
-                <ion-card-title>
-                  {{h.nombre}}
-                </ion-card-title>
-                <div>
-                  <ion-icon name="logo-usd">
+    <ion-col col-12 col-md-6 col-lg-4 *ngFor="let h of helados">
 
-                  </ion-icon>
-                  {{h.precio}}
-                </div>
-                <div>
-                    <ion-icon name="people">
-  
-                    </ion-icon>
-                    {{h.porcion}}
-                  </div>
-              </ion-card-content>
-            </ion-card>
-      </ion-col>
+
+        <ion-card>
+            <img src="{{h.imagen}}"/>
+            <ion-card-content>
+              <ion-card-title>
+                {{h.nombre}}
+                </ion-card-title>
+              <p>
+                The most popular industrial group ever, and largely
+                responsible for bringing the music to a mass audience.
+              </p>
+            </ion-card-content>
+          </ion-card>
+
+
+
+    </ion-col>
+
+
+
+
+
   </ion-row>
 
-  <<ion-fab  right bottom >
-    <button (click)="goToAdd()" ion-fab color="secondary"><ion-icon name="add" ></ion-icon></button>
-  </ion-fab>
 
 
 

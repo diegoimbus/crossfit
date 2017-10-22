@@ -3,6 +3,8 @@ import { NavController, NavParams } from 'ionic-angular';
 import { HeladosDataProvider } from '../../providers/helados-data/helados-data';
 import { Helado } from '../../providers/helados-data/helado';
 import { AddHeladoPage } from '../add-helado/add-helado';
+import { Wod } from '../../providers/wods-data/wod';
+import { WodsDataProvider } from '../../providers/wods-data/wods-data';
 
 
 @Component({
@@ -11,7 +13,7 @@ import { AddHeladoPage } from '../add-helado/add-helado';
 })
 export class HeladosPage {
 
-  helados: Helado[]=[];
+helados:Helado[]=[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public service: HeladosDataProvider) {
     this.helados = service.data;

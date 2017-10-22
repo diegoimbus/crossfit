@@ -1,4 +1,4 @@
-export class Helado {
+export class Wod {
     constructor(   public nombre:string,
         public img:string,
         public cleanJerk?:number,
@@ -10,7 +10,7 @@ export class Helado {
         public grace?:number,
         public cincoK?:number,
         public cindy?:number,
-        ){
-        
-    }
+        ){}
+
+
 }
