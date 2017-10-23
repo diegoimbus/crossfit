@@ -27,9 +27,9 @@ export class SignupPage {
     this.navCtrl.push(LoginPage)
   }
 
-  async signup(user: User){
+  signup(user: User){
     try {
-      const result = await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password)
+      const result = this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password)
       console.log(result)
     }
     catch(e){

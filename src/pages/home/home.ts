@@ -5,6 +5,7 @@ import { BebidasPage } from '../bebidas/bebidas';
 import { LoginPage } from '../login/login';
 import { Storage } from '@ionic/storage';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { ModificarWodPage } from '../modificar-wod/modificar-wod';
 
 @Component({
   selector: 'page-home',
@@ -15,10 +16,10 @@ export class HomePage {
   root: any = HeladosPage;
   menuOpc: Menu[] = [
     
-        { label: 'Inicio', icon: 'home' },
-        { label: 'Perfil', icon: 'person' },
-        { label: 'Comparar resultados', icon: 'stats' },
-        { label: 'Crea un Box', icon: 'add-circle' },
+        { label: 'Tus records', icon: 'person' },
+        { label: 'Encuentra un box', icon: 'locate' },
+        { label: 'Comparar', icon: 'stats' },
+        { label: 'Modifica tus resultados', icon: 'refresh-circle' },
 
     
       ]
@@ -53,8 +54,17 @@ export class HomePage {
     if(index == 0) {
       this.root = HeladosPage;
     }
+    if(index == 1) {
+      this.root = BebidasPage
+    }
+    if(index == 2) {
+
+    }
+    if(index ==3){
+      this.root = ModificarWodPage
+    }
     else {
-      this.root =BebidasPage;
+      this.root =HeladosPage;
     }
   }
 

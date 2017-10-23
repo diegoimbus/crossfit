@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { HeladosDataProvider } from '../../providers/helados-data/helados-data';
 import { Helado } from '../../providers/helados-data/helado';
-import { AddHeladoPage } from '../add-helado/add-helado';
+
 
 
 
@@ -23,9 +23,7 @@ helados:Helado[]=[];
         
         }
 
-    goToAdd() {
-      this.navCtrl.parent.push(AddHeladoPage);
-    }
+
 
 
 }

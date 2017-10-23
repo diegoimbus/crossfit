@@ -9,10 +9,10 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { HeladosPage } from '../pages/helados/helados';
 import { BebidasPage } from '../pages/bebidas/bebidas';
-import { AddHeladoPage } from '../pages/add-helado/add-helado';
 import { HeladosDataProvider } from '../providers/helados-data/helados-data';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
+import { ModificarWodPage } from '../pages/modificar-wod/modificar-wod';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -34,9 +34,9 @@ export const firebaseConfig = {
     HomePage,
     HeladosPage,
     BebidasPage,
-    AddHeladoPage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    ModificarWodPage
    
 
   ],
@@ -54,9 +54,9 @@ export const firebaseConfig = {
     HomePage,
     LoginPage, 
     HeladosPage,
-    AddHeladoPage,
     BebidasPage,
-    SignupPage
+    SignupPage,
+    ModificarWodPage
   ],
   providers: [
     StatusBar,
