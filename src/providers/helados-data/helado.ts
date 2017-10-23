@@ -1,15 +1,10 @@
 export class Helado {
-    constructor(   public nombre:string,
-        public img:string,
-        public cleanJerk?:number,
-        public snatch?:number,
-        public deadlift?:number,
-        public backSquat?:number,
-        public fran?:number,
-        public isabel?:number,
-        public grace?:number,
-        public cincoK?:number,
-        public cindy?:number,
+    constructor(   
+        public nombre:string,
+        public rm:number,
+        public imagen:string
+        
+
         ){
         
     }

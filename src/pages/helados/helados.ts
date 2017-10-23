@@ -3,8 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { HeladosDataProvider } from '../../providers/helados-data/helados-data';
 import { Helado } from '../../providers/helados-data/helado';
 import { AddHeladoPage } from '../add-helado/add-helado';
-import { Wod } from '../../providers/wods-data/wod';
-import { WodsDataProvider } from '../../providers/wods-data/wods-data';
+
 
 
 @Component({

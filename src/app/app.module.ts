@@ -13,8 +13,19 @@ import { AddHeladoPage } from '../pages/add-helado/add-helado';
 import { HeladosDataProvider } from '../providers/helados-data/helados-data';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
-import { WodsDataProvider } from '../providers/wods-data/wods-data';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyBpsQ1YKo6b41-x5elBq1oqXtxOEiQDMJE",
+  authDomain: "c2bionic.firebaseapp.com",
+  databaseURL: "https://c2bionic.firebaseio.com",
+  projectId: "c2bionic",
+  storageBucket: "c2bionic.appspot.com",
+  messagingSenderId: "1089393316187"
+}
 
 
 @NgModule({
@@ -32,7 +43,10 @@ import { WodsDataProvider } from '../providers/wods-data/wods-data';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -48,8 +62,7 @@ import { WodsDataProvider } from '../providers/wods-data/wods-data';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    HeladosDataProvider,
-    WodsDataProvider
+    HeladosDataProvider
     
   ]
 })

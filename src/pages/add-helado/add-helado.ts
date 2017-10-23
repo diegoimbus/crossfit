@@ -19,7 +19,7 @@ export class AddHeladoPage {
   helado: Helado;
 
   constructor(public  navCtrl: NavController, public navParams: NavParams, public service:HeladosDataProvider) {
-    this.helado = new Helado("",0,0,"");
+    this.helado = new Helado("",0,"");
   }
 
   ionViewDidLoad() {

@@ -11,8 +11,8 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-row>
+<ion-content padding class="principal">
+  <ion-row >
     <ion-col col-12 col-md-6 col-lg-4 *ngFor="let h of helados">
 
 
@@ -23,8 +23,7 @@
                 {{h.nombre}}
                 </ion-card-title>
               <p>
-                The most popular industrial group ever, and largely
-                responsible for bringing the music to a mass audience.
+                {{h.rm}} Lbs
               </p>
             </ion-card-content>
           </ion-card>
