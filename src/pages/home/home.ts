@@ -32,35 +32,17 @@ export class HomePage {
 
   }
 
-  ionViewWillLoad(){ 
-    this.afAuth.authState.subscribe(data => {
-      if (data && data.email && data.uid){
-        this.toast.create({
-          message: `BIENVENIDO A C2B, ${data.email}`,
-          duration: 3000
-        }).present()
-      }
-      else {
-        this.toast.create({
-          message: `usuario y/o contraseña incorrectos`,
-          duration: 3000
-        }).present()
-      }
-  
-    })
-  }
+
 
   setContent(index:number){
     if(index == 0) {
       this.root = HeladosPage;
     }
-    if(index == 1) {
+    else if(index === 1) {
       this.root = BebidasPage
     }
-    if(index == 2) {
-
-    }
-    if(index ==3){
+    
+    else if(index ==3){
       this.root = ModificarWodPage
     }
     else {
@@ -70,6 +52,7 @@ export class HomePage {
 
   logout(){
     this.storage.set("logged", false)
+    this.afAuth.auth.signOut()
     this.navCtrl.setRoot(LoginPage)
 
   }

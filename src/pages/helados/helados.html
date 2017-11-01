@@ -13,27 +13,131 @@
 
 <ion-content padding class="principal">
   <ion-row >
-    <ion-col col-12 col-md-6 col-lg-4 *ngFor="let h of helados">
-
-
-        <ion-card class="tarjeta">
-            <img src="{{h.imagen}}"/>
+    <ion-col col-12 col-md-6 col-lg-4>
+        <ion-card class="tarjeta" (click)="mod()">
+            <img src="{{someTextUrl}}"/>
             <ion-card-content>
               <ion-card-title color="primary">
-                {{h.nombre}}
+                Clean & Jerk
                 </ion-card-title>
               <ion-label color="primary">
-                {{h.rm}} Lbs
+                 {{(profileData | async)?.clean}} Libras
               </ion-label>
             </ion-card-content>
           </ion-card>
-
-
-
     </ion-col>
 
+    <ion-col col-12 col-md-6 col-lg-4>
+      <ion-card class="tarjeta" (click)="modSnatch()">
+          <img src="{{snatchUrl}}"/>
+          <ion-card-content>
+            <ion-card-title color="primary">
+              Snatch
+              </ion-card-title>
+            <ion-label color="primary">
+              {{(profileData | async)?.snatch}} Libras
+            </ion-label>
+          </ion-card-content>
+        </ion-card>
+  </ion-col>
 
+  <ion-col col-12 col-md-6 col-lg-4>
+    <ion-card class="tarjeta">
+        <img src="{{deadliftUrl}}" (click)="modDeadlift()"/>
+        <ion-card-content>
+          <ion-card-title color="primary">
+            Deadlift
+            </ion-card-title>
+          <ion-label color="primary">
+            {{(profileData | async)?.deadlift}} Libras
+          </ion-label>
+        </ion-card-content>
+      </ion-card>
+</ion-col>
 
+<ion-col col-12 col-md-6 col-lg-4>
+  <ion-card class="tarjeta" (click)="modBackSquat()">
+      <img src="{{backsquatUrl}}"/>
+      <ion-card-content>
+        <ion-card-title color="primary">
+          Back Squat
+          </ion-card-title>
+        <ion-label color="primary">
+          {{(profileData | async)?.backsquat}} Libras
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+</ion-col>
+
+<ion-col col-12 col-md-6 col-lg-4>
+  <ion-card class="tarjeta" (click)="modFran()">
+      <img src="{{franUrl}}"/>
+      <ion-card-content>
+        <ion-card-title color="primary">
+          Fran
+          </ion-card-title>
+        <ion-label color="primary">
+          {{(profileData | async)?.fran}} Libras
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+</ion-col>
+
+<ion-col col-12 col-md-6 col-lg-4>
+  <ion-card class="tarjeta" (click)="modIsabel()">
+      <img src="{{isabelUrl}}"/>
+      <ion-card-content>
+        <ion-card-title color="primary">
+          Isabel
+          </ion-card-title>
+        <ion-label color="primary">
+          {{(profileData | async)?.isabel}} Libras
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+</ion-col>
+
+<ion-col col-12 col-md-6 col-lg-4>
+  <ion-card class="tarjeta" (click)="modGrace()")>
+      <img src="{{graceUrl}}"/>
+      <ion-card-content>
+        <ion-card-title color="primary">
+          Grace
+          </ion-card-title>
+        <ion-label color="primary">
+          {{(profileData | async)?.grace}} Libras
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+</ion-col>
+
+<!-- <ion-col col-12 col-md-6 col-lg-4>
+  <ion-card class="tarjeta">
+      <img src="http://running.competitor.com/files/2011/03/IMG_16421.jpg"/>
+      <ion-card-content>
+        <ion-card-title color="primary">
+          Run 5K
+          </ion-card-title>
+        <ion-label color="primary">
+          {{(profileData | async)?.cincok}} Libras
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+</ion-col> -->
+
+<ion-col col-12 col-md-6 col-lg-4>
+  <ion-card class="tarjeta" (click)="modCindy()">
+      <img src="{{cindyUrl}}"/>
+      <ion-card-content>
+        <ion-card-title color="primary">
+          Cindy
+          </ion-card-title>
+        <ion-label color="primary">
+          {{(profileData | async)?.cindy}} Libras
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+</ion-col>
 
 
   </ion-row>

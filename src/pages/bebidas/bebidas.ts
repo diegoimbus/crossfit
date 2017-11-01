@@ -25,6 +25,8 @@ export class BebidasPage {
     const location4 = new google.maps.LatLng(2.483852, -76.577548)
     const location5 = new google.maps.LatLng(2.494466, -76.593039)
 
+    
+
     const options = {
       center: location1,
       zoom: 14,
@@ -32,20 +34,26 @@ export class BebidasPage {
       mapTypeId: 'roadmap'
     }
     const map = new google.maps.Map(this.mapRef.nativeElement, options)
+    
+   
 
 
-    this.addMarker(location1, map)
-    this.addMarker(location2, map)
-    this.addMarker(location3, map)
-    this.addMarker(location4, map)
-    this.addMarker(location5, map)
+    
+
+    this.addMarker(location1,"strenght fit",  map)
+    this.addMarker(location2,"corpus",  map)
+    this.addMarker(location3,"fitness",  map)
+    this.addMarker(location4,"tnt",map)
+    this.addMarker(location5,"complejo", map)
 
   }
 
-  addMarker(position, map) {
+  addMarker(position, title:string, map) {
     return new google.maps.Marker({
       position,
+      title, 
       map
     })
   }
+
 }

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Helado } from '../../providers/helados-data/helado';
+//import { Helado } from '../../providers/helados-data/helado';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 import { HomePage } from '../home/home';
 import { Profile } from '../../models/profile';
 

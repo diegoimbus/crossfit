@@ -1,0 +1,28 @@
+
+<ion-header>
+  
+    <ion-navbar class="header" color="primary">
+      <ion-title>Cindy</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding class="ion-content">
+    
+  
+        <ion-item color="secondary">
+            <ion-label floating color="primary">ingresar valor</ion-label>
+            <ion-input type="number" [(ngModel)]="cindy.cindy" ></ion-input>
+          </ion-item>
+  
+  
+          <button ion-button  block (click)="modCindy(cindy.cindy)" color="primary">Modificar</button>
+          
+  
+        
+        <button ion-button block (click)="takePhoto()"><ion-icon name="camera"></ion-icon>Tomar foto</button>
+        
+  
+  
+  </ion-content>

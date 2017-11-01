@@ -1,0 +1,28 @@
+
+<ion-header>
+  
+    <ion-navbar class="header" color="primary">
+      <ion-title>Deadlift</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding class="ion-content">
+    
+  
+        <ion-item color="secondary">
+            <ion-label floating color="primary">ingresar valor</ion-label>
+            <ion-input type="number" [(ngModel)]="deadlift.deadlift" ></ion-input>
+          </ion-item>
+  
+  
+          <button ion-button  block (click)="modDeadlift(deadlift.deadlift)" color="primary">Modificar</button>
+          
+  
+        
+        <button ion-button block (click)="takePhoto()"><ion-icon name="camera"></ion-icon>Tomar foto</button>
+        
+  
+  
+  </ion-content>

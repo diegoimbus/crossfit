@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { User } from '../../models/user';
 import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase/app'
 
 
 @Component({
@@ -27,9 +28,9 @@ export class SignupPage {
     this.navCtrl.push(LoginPage)
   }
 
-  signup(user: User){
+  async signup(user: User){
     try {
-      const result = this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password)
+      const result = await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password).then((res)=>{console.log(`el usuario se ha creado correctamente`)})
       console.log(result)
     }
     catch(e){

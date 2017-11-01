@@ -1,0 +1,28 @@
+
+<ion-header>
+  
+    <ion-navbar class="header" color="primary">
+      <ion-title>Snatch</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding class="ion-content">
+    
+  
+        <ion-item color="secondary">
+            <ion-label floating color="primary">ingresar valor</ion-label>
+            <ion-input type="number" [(ngModel)]="snatch.snatch" ></ion-input>
+          </ion-item>
+  
+  
+          <button ion-button  block (click)="modSnatch(snatch.snatch)" color="primary">Modificar</button>
+          
+  
+        
+        <button ion-button block (click)="takePhoto()"><ion-icon name="camera"></ion-icon>Tomar foto</button>
+        
+  
+  
+  </ion-content>

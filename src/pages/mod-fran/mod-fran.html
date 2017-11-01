@@ -1,0 +1,28 @@
+
+<ion-header>
+  
+    <ion-navbar class="header" color="primary">
+      <ion-title>Fran</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding class="ion-content">
+    
+  
+        <ion-item color="secondary">
+            <ion-label floating color="primary">ingresar valor</ion-label>
+            <ion-input type="number" [(ngModel)]="fran.fran" ></ion-input>
+          </ion-item>
+  
+  
+          <button ion-button  block (click)="modFran(fran.fran)" color="primary">Modificar</button>
+          
+  
+        
+        <button ion-button block (click)="takePhoto()"><ion-icon name="camera"></ion-icon>Tomar foto</button>
+        
+  
+  
+  </ion-content>
